@@ -1,27 +1,42 @@
-//Begin script.
-const add = document.getElementById("#add")
-add.addEventListener('click', addition());
+const numberBtns = document.querySelectorAll('[data-number]');
+const opBtns = document.querySelectorAll('[data-operation]');
+const delBtn = document.querySelector('[data-delete]');
+const equalsBtn = document.querySelector('[data-equals]');
+const clearBtn = document.querySelector('[data-all-clear]');
+const prevOpTxt = document.querySelector('[data-previous-op]');
+const currOpTxt = document.querySelector('[data-current-op]');
 
-
-function addition(a, b) {        //sign functions to be called by an operate func.
-    let plus = (a + b);
-    return plus;
+class calc {
+    constructor(prevOpTxt, currOpTxt) {
+        this.prevOpTxt = prevOpTxt;
+        this.currOpTxt = currOpTxt;
+        this.clear();
+    }
 }
 
-function subtraction(a, b) {
-    let subtract = (a - b);
-    return subtract;
-}                         
+function delete() {
 
-function division(a, b) {
-    let divide = (a / b);
-    return divide;
 }
 
-function multiply(a, b) {
-    let multi = (a * b);
-    return multi;
+function clear() {
+    this.currentOp = '';
+    this.prevOp = '';
+    this.operation = undefined;
+}
+const calculator = new calc(prevOpTxt, currOpTxt)
+
+function operate() {
+
 }
 
-function operate {               //A function which takes an operator and calls a function
+function appendNum(number) {
+
+}
+
+function chooseOp(operation) {
+
+}
+
+function updateDisp() {
+
 }
